@@ -1,9 +1,13 @@
-import * as  express from 'express';
+import dotenv from 'dotenv';
+import express from 'express';
 import routes from './routes';
 import 'express-async-errors';
-import * as path from 'path';
+import path from 'path';
 import './database/connections';
-import * as cors from 'cors';
+import cors from 'cors';
+
+
+dotenv.config();
 
 const app = express();
 

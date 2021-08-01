@@ -1,5 +1,5 @@
-import * as multer from 'multer';
-import * as path from 'path';
+import multer from 'multer';
+import path from 'path';
 
 export default{
     storage:multer.diskStorage({

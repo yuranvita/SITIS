@@ -1,4 +1,4 @@
-import {Column, Entity , JoinColumn, ManyToMany, ManyToOne, OneToMany, PrimaryColumn, PrimaryGeneratedColumn , } from 'typeorm'
+import {Column, Entity , JoinColumn, OneToMany, PrimaryColumn } from 'typeorm'
 import {v4 as uuid} from 'uuid';
 import Municipality from './Municipality';
 

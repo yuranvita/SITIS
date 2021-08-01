@@ -1,4 +1,4 @@
-import {Column, Entity , JoinColumn, ManyToOne, OneToMany, PrimaryColumn, PrimaryGeneratedColumn , } from 'typeorm'
+import {Column, Entity , JoinColumn, ManyToOne, OneToMany, PrimaryColumn} from 'typeorm'
 import Attractions from './Attractions';
 import {v4 as uuid} from 'uuid';
 import Region from './Region';

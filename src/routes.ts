@@ -1,5 +1,5 @@
 import {Router} from 'express';
-import * as multer from 'multer';
+import multer from 'multer';
 import uploadconfig from './config/upload';
 
 import AttracationsController from './controllers/AttractionsController' ;

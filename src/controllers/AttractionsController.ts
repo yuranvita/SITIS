@@ -1,7 +1,8 @@
 
 import {Request , Response} from 'express';
-import {getRepository} from 'typeorm';
+import {getCustomRepository, getRepository} from 'typeorm';
 import Attractions from '../models/Attractions';
+import { attractionRepositories } from '../repositories/AttractionRepositories';
 import attractionView from '../views/attractionView';
 
 
@@ -21,13 +22,13 @@ export default {
 
         const {id} = request.params
 
-        const attractionRepository = getRepository(Attractions);
+        const attractionRepository = getCustomRepository(attractionRepositories);
 
         const attraction = await attractionRepository.findOne(id , {relations : ['images']} );
         
         console.log(attraction)
 
-        return response.json(attractionView.render(attraction));
+        return response.json(attraction);
 
     },
     async create (request : Request , response : Response){
