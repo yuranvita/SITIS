@@ -5,6 +5,7 @@
    "author": "Yuran Vita <yuranxd1@gmail.com>",
    "license": "MIT",
    "scripts": {
+      "start" : "node src/server.ts",
       "dev": "ts-node-dev --transpile-only --ignore-watch node_modules src/server.ts",
       "typeorm": "ts-node-dev ./node_modules/typeorm/cli.js"
    },
