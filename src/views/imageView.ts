@@ -6,7 +6,7 @@ export default {
  render(image : Image){
    return {
      id : image.id,
-     url : `https://sitis.herokuapp.com:3333/uploads/${image.path}`
+     url : `https://sitis.herokuapp.com/uploads/${image.path}`
    };
  },
  renderMany(images : Image[]){
