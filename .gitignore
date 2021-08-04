@@ -1,6 +1,9 @@
 node_modules/
 
 
+ormconfig.json
+build/
+
 .env
 
 

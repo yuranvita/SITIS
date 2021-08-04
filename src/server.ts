@@ -5,7 +5,7 @@ import 'express-async-errors';
 import path from 'path';
 import './database/connections';
 import cors from 'cors';
-
+import "reflect-metadata";
 
 dotenv.config();
 
