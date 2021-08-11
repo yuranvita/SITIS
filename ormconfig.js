@@ -1,17 +1,10 @@
-{
+console.log('process.env.DATABASE_URL' , process.env.DATABASE_URL);
+module.exports = {
 
-
-    "name": "DATABASE",
-    "type": "pg",
-    "host": "localhost",
-    "port": 5432,
-    "username": "",
-    "password": "test",
-    
-
-   "type" :"pg",
-   "database": "./build/database/database.sqlite",
-   "migrations": [
+    "type" :"postgres",
+    "url" : process.env.DATABASE_URL,   
+    // "database": "./src/database/database.pg",
+    "migrations": [
        "./build/database/migrations/*.ts"
    ],
    "entities":[
