@@ -19,14 +19,14 @@ import Controller from './controllers/Controller';
 const authenticationController = new AuthenticationUserController();
 const createUserController = new CreateUserController();
 
-const  controller = new Controller();
+
 
 
 const routes = Router();
 const upload = multer(uploadconfig);
 
 //Rotas Gets
-routes.get('/' , controller);
+routes.get('/' , Controller.index);
 routes.get('/attractions' , ensureAuthenticated, AttracationsController.index);
 routes.get('/attractions/:id' , ensureAuthenticated, AttracationsController.show);
 routes.get('/municipality', ensureAuthenticated, MunicipalityController.index);
