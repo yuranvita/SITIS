@@ -2,7 +2,7 @@
 import {Request , Response} from 'express';
 import {getCustomRepository, getRepository} from 'typeorm';
 import Attractions from '../models/Attractions';
-import { attractionRepositories } from '../repositories/AttractionRepositories';
+import { AttractionRepositories } from '../repositories/AttractionRepositories';
 import attractionView from '../views/attractionView';
 
 
@@ -22,7 +22,7 @@ export default {
 
         const {id} = request.params
 
-        const attractionRepository = getCustomRepository(attractionRepositories);
+        const attractionRepository = getCustomRepository(AttractionRepositories);
 
         const attraction = await attractionRepository.findOne(id , {relations : ['images']} );
         

@@ -8,22 +8,27 @@ import MunicipalityController from './controllers/MunicipalityController';
 import AttractionsCardController  from './controllers/AttractionsCardController';
 
 
+
 import  { AuthenticationUserController } from './controllers/AuthenticationUserController';
 import  { CreateUserController }  from './controllers/CreateUserController';
 import  { ensureAuthenticated } from './middlewares/ensureAuthenticated';
+
+
+import Controller from './controllers/Controller';
  
 const authenticationController = new AuthenticationUserController();
 const createUserController = new CreateUserController();
 
-
+const  controller = new Controller();
 
 
 const routes = Router();
 const upload = multer(uploadconfig);
 
 //Rotas Gets
-routes.get('/attractions' , ensureAuthenticated, AttracationsController.index)
-routes.get('/attractions/:id' , ensureAuthenticated, AttracationsController.show)
+routes.get('/' , controller);
+routes.get('/attractions' , ensureAuthenticated, AttracationsController.index);
+routes.get('/attractions/:id' , ensureAuthenticated, AttracationsController.show);
 routes.get('/municipality', ensureAuthenticated, MunicipalityController.index);
 routes.get('/cards/:page' , ensureAuthenticated, AttractionsCardController.index)
 

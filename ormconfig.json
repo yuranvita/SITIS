@@ -1,14 +1,28 @@
 {
-   "type" :"sqlite",
+
+
+    "name": "DATABASE",
+    "type": "pg",
+    "host": "localhost",
+    "port": 5432,
+    "username": "",
+    "password": "test",
+    
+
+   "type" :"pg",
    "database": "./build/database/database.sqlite",
    "migrations": [
-       "/build/database/migrations/*.ts"
+       "./build/database/migrations/*.ts"
    ],
    "entities":[
-       "/build/models/*.ts"
+       "./build/models/*.ts"
    ],
    "cli" : {
-       "migrationsDir" : "./build/database/migrations"
+       "migrationsDir" : 
+        [ 
+            "./src/database/migrations"
+        ],
+            "entitiesDir" : "./src/models"
    }
    
 }
