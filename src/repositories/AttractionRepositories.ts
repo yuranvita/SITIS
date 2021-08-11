@@ -2,9 +2,9 @@ import { EntityRepository, Repository } from "typeorm";
 import Attractions from "../models/Attractions";
 
 @EntityRepository(Attractions)
-class attractionRepositories extends Repository<Attractions> {
+class AttractionRepositories extends Repository<Attractions> {
 
 }
 
 
-export { attractionRepositories }
+export { AttractionRepositories }

@@ -3,7 +3,7 @@ module.exports = {
 
     "type" :"postgres",
     "url" : process.env.DATABASE_URL,   
-    // "database": "./src/database/database.pg",
+    //"database": "./src/database/database.postgres",
     "migrations": [
        "./build/database/migrations/*.ts"
    ],

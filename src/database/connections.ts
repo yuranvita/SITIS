@@ -1,4 +1,19 @@
-import {createConnections} from 'typeorm';
+
+import {createConnection } from 'typeorm';
 
 
-createConnections();
+
+async  ()=> {
+  await  createConnection({
+    type : "postgres",
+    url : process.env.DATABASE_URL
+  });
+};
+
+
+
+
+
+
+
+
