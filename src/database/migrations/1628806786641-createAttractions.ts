@@ -49,7 +49,7 @@ export class attractions1617907444701 implements MigrationInterface {
                 },
                 {
                     name : 'municipality_id',
-                    type : 'integer'
+                    type : 'uuid'
                 },
                 {
                     name : 'created_at',

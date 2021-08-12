@@ -37,7 +37,7 @@ export class municipality1617907435239 implements MigrationInterface {
                 },
                 {
                     name : 'region_id',
-                    type : 'integer'
+                    type : 'uuid'
                 }
             ],
                 foreignKeys : [
