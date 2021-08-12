@@ -11,7 +11,8 @@ module.exports ={
         "./build/models/*.ts"
     ],
     "cli" : {
-        "migrationsDir" : "./src/database/migrations"
+        "migrationsDir" : "./src/database/migrations",
+        "entitiesDir" : "./src/models/*.ts"
     }
     
  }
