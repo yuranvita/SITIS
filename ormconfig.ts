@@ -5,13 +5,13 @@ module.exports ={
     "url"  :  process.env.DATABASE_URL,
     //"database": "./src/database/database.sqlite",
     "migrations": [
-        "./build/database/migrations/*.ts"
+        "./build/database/migrations/*.js"
     ],
     "entities":[
-        "./build/models/*.ts"
+        "./build/models/*.js"
     ],
     "cli" : {
-        "migrationsDir" : "./src/database/migrations",
+        "migrationsDir" :  ["./src/database/migrations"],
         "entitiesDir" : "./src/models/*.ts"
     }
     
