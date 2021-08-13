@@ -6,8 +6,8 @@
    "license": "MIT",
    "type": "commonjs",
    "scripts": {
-      "start": "node build/server.js",
-      "build": "rimraf ./build && tsc",
+      "start": "node dist/server.js",
+      "build": "rimraf ./dist && tsc",
       "dev": "ts-node-dev --transpile-only --ignore-watch node_modules src/server.ts",
       "typeorm": "ts-node-dev ./node_modules/typeorm/cli.js"
    },
