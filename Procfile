@@ -1,1 +1,1 @@
-web : npm build && npm start && npx typeorm migration:run
+web : npm build && npm start
