@@ -3,6 +3,7 @@ import {Request , Response} from 'express';
 import {getCustomRepository, getRepository} from 'typeorm';
 import Attractions from '../models/Attractions';
 import attractionView from '../views/attractionView';
+import jwt from 'jsonwebtoken'
 
 
 export default {
@@ -45,8 +46,9 @@ export default {
             municipality_id
         } = request.body;
 
-        const attractionRepository = getRepository(Attractions);
+        
 
+        const attractionRepository = getRepository(Attractions);
 
         const requestImages = request.files as Express.Multer.File[];
 
