@@ -59,8 +59,8 @@ export default {
         const data = {
             name,
             user_id,
-            latitude,
-            longitude,
+            latitude : Number(latitude),
+            longitude : Number(longitude),
             about,
             instruction,
             opening_hours,
