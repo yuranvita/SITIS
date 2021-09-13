@@ -21,19 +21,23 @@ export class attractions1617907444701 implements MigrationInterface {
                 },
                 {
                     name : 'latitude',
-                    type : 'decimal'
+                    type : 'decimal',
+                    scale : 10,
+                    precision : 2
                 },
                 {
                     name : 'longitude',
-                    type : 'decimal'
+                    type : 'decimal',
+                    scale : 10,
+                    precision : 2
                 },
                 {
                     name : 'about',
-                    type : 'varchar'
+                    type : 'text'
                 },
                 {
                     name : 'instruction',
-                    type : 'varchar'
+                    type : 'text'
                 },
                 {
                     name : 'opening_hours',
@@ -41,7 +45,8 @@ export class attractions1617907444701 implements MigrationInterface {
                 },
                 {
                     name : 'open_on_weekends',
-                    type : 'boolean'
+                    type : 'boolean',
+                    default : false
                 },
                 {
                     name : 'whatsapp',
