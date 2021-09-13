@@ -72,9 +72,17 @@ export default {
 
         const attraction = attractionRepository.create(data);
         
-        await attractionRepository.save(attraction);
+       
+        
+        try{
+            await attractionRepository.save(attraction);
+            return response.status(201).json({attraction});
+        }catch ( err){
+            return response.json({"alggo deu errado" : err});
+        }
 
-        return response.status(201).json({attraction});
+
+     
 
 
     }
