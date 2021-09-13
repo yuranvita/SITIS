@@ -67,7 +67,7 @@ export default {
             opening_hours,
             open_on_weekends : open_on_weekends === 'true',
             whatsapp,
-            municipality_id,
+            municipality_id
             //images
         };
 
