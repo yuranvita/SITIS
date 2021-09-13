@@ -17,7 +17,7 @@ export class images1617907456180 implements MigrationInterface {
                 },
                 {
                     name : 'attraction_id',
-                    type : 'integer'
+                    type : 'uuid'
                 }
             ] ,
             foreignKeys : [
