@@ -65,24 +65,18 @@ export default {
             instruction,
             opening_hours,
             open_on_weekends : open_on_weekends === 'true',
-            whatsapp,
+            whatsapp ,
             municipality_id
             //images
         };
 
         const attraction = attractionRepository.create(data);
-        
-       
-        
-        try{
+    
+      
             await attractionRepository.save(attraction);
+            
             return response.status(201).json({attraction});
-        }catch ( err){
-            return response.json({"alggo deu errado" : err});
-        }
-
-
-     
+    
 
 
     }
