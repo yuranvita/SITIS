@@ -1,9 +1,9 @@
 
 import {Request , Response} from 'express';
-import {getCustomRepository, getRepository} from 'typeorm';
+import {getRepository} from 'typeorm';
 import Attractions from '../models/Attractions';
 import attractionView from '../views/attractionView';
-import jwt from 'jsonwebtoken'
+
 
 
 export default {
