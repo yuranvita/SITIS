@@ -35,7 +35,7 @@ routes.get('/cards/:page' , ensureAuthenticated, AttractionsCardController.index
 
 //Rotas Posts
 routes.post('/session' , authenticationController.handle);
-routes.post('/attractions', upload.array('images'),  AttracationsController.create);
+routes.post('/attractions', AttracationsController.create);
 routes.post('/region', RegionController.create);
 routes.post('/municipality', MunicipalityController.create);
 routes.post('/user' ,createUserController.handle )
