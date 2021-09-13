@@ -50,9 +50,8 @@ export default {
 
         const attractionRepository = getRepository(Attractions);
 
-        const requestImages = request.files as Express.Multer.File[];
-        
         // error no HEROKU migrar para AWS 
+        //const requestImages = request.files as Express.Multer.File[];  
         // const images = requestImages.map(image => {
         //     return {path : image.filename}
         // });
