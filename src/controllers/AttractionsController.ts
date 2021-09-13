@@ -74,9 +74,15 @@ export default {
         
         console.log(attraction);
       
+        try{
             await attractionRepository.save(attraction);
 
             return response.status(201).json({attraction});
+        }
+        catch (err){
+            return response.json({err})
+        }
+           
     
 
 
