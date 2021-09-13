@@ -25,9 +25,7 @@ export class municipality1617907435239 implements MigrationInterface {
                 },
                 {
                     name : 'temperature',
-                    type : 'decimal',
-                    scale : 2,
-                    precision : 2
+                    type : 'float'
                 },
                 {
                     name : 'access',

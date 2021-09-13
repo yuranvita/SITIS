@@ -21,16 +21,12 @@ export class attractions1617907444701 implements MigrationInterface {
                 },
                 {
                     name : 'latitude',
-                    type : 'float',
-                    scale: 10,
-                    precision : 2
+                    type : 'float'
                   
                 },
                 {
                     name : 'longitude',
-                    type : 'float',
-                    scale: 10,
-                    precision : 2
+                    type : 'float'
                 },
                 {
                     name : 'about',
