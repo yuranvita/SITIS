@@ -36,7 +36,7 @@ export default class Municipality{
     
     @OneToMany(() => Attractions , attractions => attractions.municipality)
     @JoinColumn({name : 'municipality_id'})
-    municipality : Attractions[]
+    attratcions : Attractions[]
     
     constructor(){
         if(!this.id){

@@ -38,7 +38,7 @@ export default class Attractions{
     @Column()
     open_on_weekends: boolean;
 
-    @Column()
+    @Column({type : 'bigint'})
     whatsapp : number;
     
     @Column()
@@ -51,7 +51,7 @@ export default class Attractions{
     @JoinColumn({name : 'attraction_id'})
     images:Image[];
 
-    @ManyToOne(()=>Municipality , municipality => municipality.municipality)
+    @ManyToOne(()=>Municipality , municipality => municipality.attratcions)
     @JoinColumn({name : 'municipality_id'})
     municipality : Municipality;
 
