@@ -51,10 +51,10 @@ export default {
         const attractionRepository = getRepository(Attractions);
 
         // error no HEROKU migrar para AWS 
-        const requestImages = request.files as Express.Multer.File[];  
-        const images = requestImages.map(image => {
-            return {path : image.filename}
-        });
+        // const requestImages = request.files as Express.Multer.File[];  
+        // const images = requestImages.map(image => {
+        //     return {path : image.filename}
+        // });
 
         const data = {
             name,
@@ -66,8 +66,8 @@ export default {
             opening_hours,
             open_on_weekends : open_on_weekends === 'true',
             whatsapp ,
-            municipality_id,
-            images
+            municipality_id
+           // images
         };
 
         const attraction = attractionRepository.create(data);
