@@ -21,14 +21,14 @@ export class attractions1617907444701 implements MigrationInterface {
                 },
                 {
                     name : 'latitude',
-                    type : 'decimal',
+                    type : 'float',
                     scale: 10,
                     precision : 2
                   
                 },
                 {
                     name : 'longitude',
-                    type : 'decimal',
+                    type : 'float',
                     scale: 10,
                     precision : 2
                 },
@@ -51,7 +51,7 @@ export class attractions1617907444701 implements MigrationInterface {
                 },
                 {
                     name : 'whatsapp',
-                    type : 'integer'
+                    type : 'bigint'
                 },
                 {
                     name : 'municipality_id',
