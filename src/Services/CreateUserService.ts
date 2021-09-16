@@ -45,8 +45,9 @@ class CreateUserService {
       password : Yup.string().required("digite uma senha!")
     })
 
+
     await schema.validate( user , {
-      abortEarly : false
+     abortEarly : false
     });
 
 
