@@ -3,6 +3,7 @@ import {Request , Response} from 'express';
 import {getRepository} from 'typeorm';
 import Attractions from '../models/Attractions';
 import attractionView from '../views/attractionView';
+import  yup from 'yup';
 
 
 
@@ -69,6 +70,24 @@ export default {
             municipality_id
            // images
         };
+
+        const schema = yup.object().shape({
+            name : yup.string().required("nome obrigatório"),
+            user_id :  yup.string().required("você precisa está logado"),
+            latitude : yup.number().required("latitude obrigatória"),
+            longitude : yup.number().required('longitude obrigatória'),
+            about : yup.string().max(300),
+            instruction : yup.string().max(300),
+            opening_hours : yup.string().required("horário obrigatório"),
+            open_on_weekends : yup.boolean(),
+            whatsapp : yup.number(),
+            municipality_id : yup.string().required("cidade obrigatório")
+        })
+
+        await schema.validate(data , {
+            abortEarly : false
+        });
+
 
         const attraction = attractionRepository.create(data);
         
