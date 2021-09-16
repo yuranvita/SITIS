@@ -1,7 +1,7 @@
 import { UserRepositories } from "../repositories/UserRepositories";
 import {getCustomRepository} from  'typeorm';
 import {hash} from 'bcryptjs';
-import yup from 'yup';
+import * as Yup from 'yup';
 
 interface IUSerRequest{
   name : string;
@@ -38,11 +38,11 @@ class CreateUserService {
       password : passwordHash
     });
 
-    const schema = yup.object().shape({
-      name : yup.string().required("nome obrigatório"),
-      email : yup.string().email(),
-      admin : yup.boolean(),
-      password : yup.string().required("digite uma senha!")
+    const schema = Yup.object().shape({
+      name : Yup.string().required("nome obrigatório"),
+      email : Yup.string().email(),
+      admin : Yup.boolean(),
+      password : Yup.string().required("digite uma senha!")
     })
 
     await schema.validate( user , {

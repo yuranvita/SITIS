@@ -3,7 +3,7 @@ import {Request , Response} from 'express';
 import {getRepository} from 'typeorm';
 import Attractions from '../models/Attractions';
 import attractionView from '../views/attractionView';
-import  yup from 'yup';
+import  * as Yup from 'yup';
 
 
 
@@ -71,17 +71,17 @@ export default {
            // images
         };
 
-        const schema = yup.object().shape({
-            name : yup.string().required("nome obrigatório"),
-            user_id :  yup.string().required("você precisa está logado"),
-            latitude : yup.number().required("latitude obrigatória"),
-            longitude : yup.number().required('longitude obrigatória'),
-            about : yup.string().max(300),
-            instruction : yup.string().max(300),
-            opening_hours : yup.string().required("horário obrigatório"),
-            open_on_weekends : yup.boolean(),
-            whatsapp : yup.number(),
-            municipality_id : yup.string().required("cidade obrigatório")
+        const schema = Yup.object().shape({
+            name : Yup.string().required("nome obrigatório"),
+            user_id :  Yup.string().required("você precisa está logado"),
+            latitude : Yup.number().required("latitude obrigatória"),
+            longitude : Yup.number().required('longitude obrigatória'),
+            about : Yup.string().max(300),
+            instruction : Yup.string().max(300),
+            opening_hours : Yup.string().required("horário obrigatório"),
+            open_on_weekends : Yup.boolean(),
+            whatsapp : Yup.number(),
+            municipality_id : Yup.string().required("cidade obrigatório")
         })
 
         await schema.validate(data , {
