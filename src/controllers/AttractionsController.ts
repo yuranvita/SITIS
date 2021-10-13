@@ -80,7 +80,7 @@ export default {
             instruction : Yup.string().max(300),
             opening_hours : Yup.string().required("horário obrigatório"),
             open_on_weekends : Yup.boolean(),
-            whatsapp : Yup.number().notRequired(),
+            whatsapp : Yup.number().optional(),
             municipality_id : Yup.string().required("cidade obrigatório")
         })
 
